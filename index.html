@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assigment</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/mid.webp"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo-icon"></div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#our-profile">Our Profile</a>
+        <a href="#portofolio">Portofolio</a>
+        <a href="#message-us">Message Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="container">
+        <header class="header-section">
+          <h1 class="inline">Hi <h1 class="inline" id="user-name">User</h1>, Welcome to My Website</h1>
+          <p>Halooooo.. Selamat datang di website saya..... >_<</p>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="assets/banner 1.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/banner 2.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/banner 3.jpg" style="width:100%">
+            </div>
+          </div>
+        </header>
+      </section>
+
+      <hr />
+
+      <section id="our-profile" class="container">
+        <header class="header-section">
+          <h1>what I've been through....</h1>
+          <div class="img-container">
+            <div class="img-flex">
+              <img src="assets/profile 1.webp" alt="jakarta" class="img-profile" />
+              <h3>Use my logic for this</h3>
+            </div>
+            <div class="img-flex">
+              <img src="assets/profile 2.jpeg" alt="bandung" class="img-profile" />
+              <h3>Happy for a moment cuz finished my assigment</h3>
+            </div>
+            <div class="img-flex">
+              <img
+                src="assets/profile 3.jpeg"
+                alt="surabaya"
+                class="img-profile"
+              />
+              <h3>im tired,,,</h3>
+            </div>
+          </div>
+        </header>
+      </section>
+
+      <hr />
+
+      <section id="message-us" class="container">
+        <header class="header-section">
+          <h1>Message Us</h1>
+          <div class="message">
+            <div class="form">
+              <div>
+                <div class="form-label">
+                  <label for="nama">Nama</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="nama"
+                    placeholder="Nama"
+                    class="input-form"
+                  />
+                </div>
+                <div class="form-label">
+                  <label for="tanggal-lahir">Tanggal Lahir </label>
+                  <input
+                    type="date"
+                    name="tanggal-lahir"
+                    id="tanggal-lahir"
+                    class="input-form"
+                  />
+                </div>
+                <div class="form-label">
+                  <label for="jenis-kelamin">Jenis Kelamin </label>
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="Laki-Laki"
+                    checked
+                  />
+                  <label for="male" class="left-10">Laki-Laki</label>
+
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="Perempuan"
+                  />
+                  <label for="female" class="left-10">Perempuan</label>
+                </div>
+
+                <div class="form-label">
+                  <label for="pesan">Pesan </label>
+                  <textarea
+                    name="pesan"
+                    id="pesan"
+                    cols="60"
+                    rows="8"
+                  ></textarea>
+                </div>
+
+                <button class="btn" onclick="result()">Submit</button>
+              </div>
+            </div>
+            <div class="answer">
+              <div class="box">
+                <br />
+                <div class="answer-flex">
+                  <p style="font-weight: bold">Nama</p>
+                  : <span style="margin-left: 8px" id="result-nama"></span>
+                </div>
+                <div class="answer-flex">
+                  <p style="font-weight: bold">Tanggal Lahir</p>
+                  : <span style="margin-left: 8px" id="result-tgl-lhr"></span>
+                </div>
+                <div class="answer-flex">
+                  <p style="font-weight: bold">Jenis Kelamin</p>
+                  : <span style="margin-left: 8px" id="result-gender"></span>
+                </div>
+                <div class="answer-flex">
+                  <p style="font-weight: bold">Pesan</p>
+                  : <span style="margin-left: 8px" id="result-pesan"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer class="container">
+      <p class="footer">By @tfs_99e</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
